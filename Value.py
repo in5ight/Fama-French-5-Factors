@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-class Factor:
+class Value:
     def __init__(self, year):
         # year为年份，字符串形式
         self.fs = pd.read_csv('./data/FS.csv')
@@ -69,18 +69,18 @@ class Factor:
         OP = self.OP()[['Stkcd', 'OP']]
         INV = self.INV()[['Stkcd', 'INV']]
 
-        df_factor = pd.merge(Size, BM, on=['Stkcd'])
-        df_factor = pd.merge(df_factor, OP, on=['Stkcd'])
-        df_factor = pd.merge(df_factor, INV, on=['Stkcd'])
-        df_factor['t'] = self.t
-        df_factor = df_factor.sort_values(by=['Stkcd'])
-        df_factor.to_csv('./data/' + self.t + '期的指标.csv', index=False)
-        return df_factor
+        df_value = pd.merge(Size, BM, on=['Stkcd'])
+        df_value = pd.merge(df_value, OP, on=['Stkcd'])
+        df_value = pd.merge(df_value, INV, on=['Stkcd'])
+        df_value['t'] = self.t
+        df_value = df_value.sort_values(by=['Stkcd'])
+        df_value.to_csv('./data/' + self.t + '期的指标.csv', index=False)
+        return df_value
 
 
 def main():
-    factor = Factor('2017')
-    print(factor.output())
+    value = Value('2017')
+    print(value.output())
 
 
 if __name__ == '__main__':
