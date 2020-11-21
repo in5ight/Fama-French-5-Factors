@@ -1,0 +1,7 @@
+市场数据
+Stkcd：股票id
+Trdmnt：日期
+Msmvosd：月个股流通市值
+Mretwd：月个股回报率
+Cmretwdos：综合月市场回报率
+Nrrmtdt：月度化无风险利率(%)，注意运算时要除以100

@@ -1,0 +1,8 @@
+财务数据
+Stkcd：股票id
+Accper：日期
+Typrep：A股
+total_assets 资产总计
+tptal_liability 负债合计
+total_equity 所有者权益合计
+operating profit 营业利润
